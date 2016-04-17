@@ -20,5 +20,6 @@ Here's what's happening:
 
 ## Links
 
-[Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-[EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+- [React to data changes](http://rauchg.com/2014/7-principles-of-rich-web-applications/#react-to-data-changes)
+- [Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
