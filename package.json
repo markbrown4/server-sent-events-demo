@@ -15,7 +15,6 @@
   "homepage": "https://github.com/markbrown4/server-sent-events#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "node-static": "^0.7.7",
     "sse": "0.0.6"
   }
 }
