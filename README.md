@@ -11,7 +11,7 @@ npm run start
 Try opening multiple browsers and looking at the logs on client and server.
 Here's what's happening:
 
-- The client initiates an http request to `/stream` via `EventSource`
+- The client initiates an http request to `/sse` via `EventSource`
 - The server sends `{ message: 'Gotcha '}` when a connection is established.
 - The server keeps an array of all connected `clients`.
 - Every three seconds the server broadcasts `{ message: 'Hello hello' }` to all connections.
