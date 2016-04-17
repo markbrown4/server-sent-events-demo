@@ -19,6 +19,8 @@ Here's what's happening:
 - All messages sent and received and connections are logged on the client and server.
 - Connections can be closed by hitting the Close button or closing the window.
 
+A nice thing about `EventSource` is that it tries to re-establish lost connections automatically, to see how this works stop the server while the browser is connected.  You'll see some polling start to occur and error events logged until you start up the server again.
+
 ## Links
 
 - [React to data changes](http://rauchg.com/2014/7-principles-of-rich-web-applications/#react-to-data-changes)
