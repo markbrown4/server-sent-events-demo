@@ -1,11 +1,11 @@
 var stream = new EventSource("/sse");
 
 stream.onopen = function() {
-  log('Opened connection');
+  log('Opened connection 🎉');
 };
 
 stream.onerror = function (event) {
-  log(JSON.stringify(event));
+  log('Error: ' + JSON.stringify(event));
 };
 
 stream.onmessage = function (event) {
@@ -14,7 +14,7 @@ stream.onmessage = function (event) {
 
 document.querySelector('#close').addEventListener('click', function(event) {
   stream.close();
-  log('Closed connection');
+  log('Closed connection 😱');
 });
 
 var list = document.getElementById('log');

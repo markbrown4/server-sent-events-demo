@@ -6,6 +6,7 @@ On the client you open a connection by creating an `EventSource` with a url to t
 ```bash
 npm install
 npm run start
+open http://localhost:8080/
 ```
 
 Try opening multiple browsers and looking at the logs on client and server.
@@ -14,7 +15,7 @@ Here's what's happening:
 - The client initiates an http request to `/sse` via `EventSource`
 - The server sends `{ message: 'Gotcha '}` when a connection is established.
 - The server keeps an array of all connected `clients`.
-- Every three seconds the server broadcasts `{ message: 'Hello hello' }` to all connections.
+- Every three seconds the server broadcasts `{ message: 'Hello hello!' }` to all connections.
 - All messages sent and received and connections are logged on the client and server.
 - Connections can be closed by hitting the Close button or closing the window.
 
