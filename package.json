@@ -1,0 +1,21 @@
+{
+  "name": "server-sent-events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markbrown4/server-sent-events.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markbrown4/server-sent-events/issues"
+  },
+  "homepage": "https://github.com/markbrown4/server-sent-events#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node-static": "^0.7.7",
+    "sse": "0.0.6"
+  }
+}
