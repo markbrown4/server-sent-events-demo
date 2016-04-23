@@ -27,3 +27,16 @@ var log = function(text) {
 window.addEventListener('beforeunload', function() {
   stream.close();
 });
+
+// can still push to the server as usual with good old ajax
+
+document.querySelector('#send').addEventListener('click', function(event) {
+  var json = JSON.stringify({ message: 'Hey there' });
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/api', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(json);
+
+  log('Sent: ' + json);
+});

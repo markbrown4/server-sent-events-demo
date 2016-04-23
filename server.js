@@ -19,10 +19,6 @@ server.listen(8080, '127.0.0.1', function() {
     stream.send(json);
     console.log('Sent: ' + json);
 
-    stream.on('message', function(message) {
-      console.log('Received: ' + message);
-    });
-
     stream.on('close', function() {
       clients.splice(clients.indexOf(stream), 1);
       console.log('Closed connection 😱');
@@ -39,3 +35,19 @@ var broadcast = function() {
   });
 }
 setInterval(broadcast, 3000)
+
+// can receive from the client with standard http and broadcast
+
+var bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.post('/api', function(req, res) {
+  var message = JSON.stringify(req.body);
+  console.log('Received: ' + message);
+  res.status(200).end();
+
+  var json = JSON.stringify({ message: 'Something changed' });
+  clients.forEach(function(stream) {
+    stream.send(json);
+    console.log('Sent: ' + json);
+  });
+})

@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/markbrown4/server-sent-events#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "sse": "0.0.6"
+    "sse": "0.0.6",
   }
 }

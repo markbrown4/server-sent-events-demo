@@ -17,6 +17,8 @@ Here's what's happening:
 - The server keeps an array of all connected `clients`.
 - Every three seconds the server broadcasts `{ message: 'Hello hello!' }` to all connections.
 - Connections can be closed by hitting the Close button or closing the window.
+- You can send `{ message: 'Hey' }` to the server by hitting `Send Message`.
+- The server sends `{ message: 'Something changed' }` to all connections when a message is received.
 
 A nice thing about `EventSource` is that it tries to re-establish lost connections automatically, to see how this works stop the server while the browser is connected.  You'll see some polling start to occur and error events logged until you start up the server again.
 
