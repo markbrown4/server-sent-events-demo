@@ -5,7 +5,7 @@ On the client you open a connection by creating an `EventSource` with a url to t
 
 ```bash
 npm install
-npm run start
+npm start
 open http://localhost:8080/
 ```
 
